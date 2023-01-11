@@ -11,8 +11,9 @@ function App() {
     })
   return (
     <div className="App">
+      <h1>Hey,Click on the button to open the modal</h1>
       <button className='openModalButton' onClick={click}>open</button>
-      {opemModal && <Modal/>}
+      {opemModal && <Modal closemodal={setOpenModal}/>}
     </div>
   )
 }

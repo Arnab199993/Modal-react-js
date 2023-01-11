@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Modal = () => {
-    
+const Modal = ({closemodal}) => {
+    const btn=(()=>{
+        closemodal(false)
+    })
   return (
     <div className='ModalBackground'>
         <div className='ModalContainer'>
-            <button>X</button>
+            <button onClick={btn}>X</button>
             <div className='title'>
                 <h1>Are you sure you want to continue</h1>
             </div>
@@ -13,7 +15,7 @@ const Modal = () => {
                 <p>The next page is awesome.You should move forward.</p>
             </div>
             <div className='footer'>
-                <button>Cancel</button>
+                <button onClick={btn}>Cancel</button>
                 <button>Continue</button>
             </div>
         </div>
